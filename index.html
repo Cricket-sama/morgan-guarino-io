@@ -3,36 +3,45 @@
 <head>
     <title>My Little Webpage</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Morgan Guarino">
     <meta name="description" content="A Little Page Made by Your's Truly">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body style="background-color:rgb(48, 252, 255);">
-    <h1 style="color:darkviolet">Morgan Guarino</h1>
+<body>
+    <h1>Morgan Guarino</h1>
+    <img src="images/avatar.png" alt="avatar created by the author as a profile photo" class="photo">
     <section id="About">
-        <h2 style="color:rgb(243, 105, 133)">About</h2>
+        <h2>About</h2>
             <p>
             My hobbies include art, crochet, plants, aquarium keeping, and I'm currently learning Japanese as well!
             I'm a creative person who is passionate about learning. Every day I want to grow as a person, even if it's just a little bit.
             </p>
     </section>
     <section id="Experience">
-    <h2 style="color:rgb(243, 105, 133)">Experience</h2>
-        <ul>
-            <li>Big Y Foods</li>
-            <li>Starbucks</li>
-            <li>Above and Beyond Dental Group</li>
-            <li>Ashlawn Farm Coffee</li>
-            <li>Root Center for Advanced Recovery</li>
+    <h2>Experience</h2>
+        <ul class="experience-list">
+            <li class="experience-item">Big Y Foods</li>
+            <li class="experience-item">Starbucks</li>
+            <li class="experience-item">Above and Beyond Dental Group</li>
+            <li class="experience-item">Ashlawn Farm Coffee</li>
+            <li class="experience-item">Root Center for Advanced Recovery</li>
         </ul>
     </section>
     <section id="Connect">
-    <h2 style="color:rgb(243, 105, 133)">Connect</h2>
-        <ul>
-        <li><a href="mailto:morgan.s.guarino@gmail.com">Email Me!</a></li>
-        <li><a href="https://github.com/Cricket-sama" target="_blank">Github</a></li>
-        <li><a href="https://www.instagram.com/ghostloopscrochet/" target="_blank">Instagram</a></li>
-        <li><a href="https://linkedin.com/in/morgan-guarino/" target="_blank">LinkedIn</a></li></a>
+    <h2>Connect</h2>
+        <center>
+        <ul class="styled-list">
+        <li class="fa"><a href="mailto:morgan.s.guarino@gmail.com" class="fa fa-envelope"></a></li>
+        <li class="fa"><a href="https://github.com/Cricket-sama" target="_blank" class="fa fa-github"></a></li>
+        <li class="fa"><a href="https://www.instagram.com/ghostloopscrochet/" target="_blank" class="fa fa-instagram"></a></li>
+        <li class="fa"><a href="https://linkedin.com/in/morgan-guarino/" target="_blank" class="fa fa-linkedin"></a></li>
         </ul>
+        </center>
     </section>
 </body>
 </html>
