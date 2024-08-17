@@ -1,161 +1,329 @@
+/* General Styling */
+html {
+    scroll-padding-top: 10rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 500px) {
+    html {
+        scroll-padding-top: 4.5em;
+    }
+}
+
 body {
     font-family: "inter";
     font-weight: 300;
     background-color: #45B8AC;
     color:#EFC050;
-    padding: 0 150px;
-    padding-top: 100px;
     margin: 0;
+}
+
+@media (min-width: 500px) {
+    body {
+        color: #828C72;
+        background-color: #4d293b;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: #458f82;
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #EFC050;
+    padding: 0.5rem 0;
     text-align: center;
 }
 
-html {
-    scroll-padding-top: 70px;
+@media (min-width: 500px) {
+    header {
+        background-color: #76426f;
+    }
 }
 
+@media (min-width: 1200px) {
+    header {
+        background-color: #f08e9a;
+    }
+}
+
+/* Main Headings */
 h1 {
     font-weight: 500;
     background-color: #D65076;
     color: #EFC050;
-    border: solid #D65076 2px;
     border-radius: 5px;
-    margin: 30px auto;
-    padding: 20px;
-    display: inline;
+    margin: 10.5rem auto 0;
+    padding: 1rem;
+    max-width: 50%;
     text-align: center;
+}
+
+@media (min-width: 500px) {
+    h1 {
+        color: #f3e9e2;
+        background-color: #bcc9a8;
+        max-width: 30%;
+        margin: 2.5em auto 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        background-color: #f08e9a;
+        max-width: 15%;
+        margin: 2.5em auto 0;
+    }
 }
 
 h2 {
     font-weight: 400;
     background-color: #EFC050;
     color: #D65076;
-    border: solid #EFC050 2px;
     border-radius: 5px;
     display: inline;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    max-width: 100%;
 }
 
+@media (min-width: 500px) {
+    h2 {
+        color: #f3e9e2;
+        background-color: #bcc9a8;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        background-color: #f08e9a;
+    }
+}
+
+/* Sections */
 section {
-    padding-top: 20px;
-    margin-bottom: 20px;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #EFC050;
-    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
-.about-desc {
-    display:flex;
-    background-color:#D65076;
-    padding: 15px;
-    margin: 30px auto;
-    border-radius: 5px;
-    max-width: 400px;
-    width: 100%;
-}
-
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content:center;
-    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    width: auto;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 0.5em;
 }
 
 .navbar-links {
+    display: flex;
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 20px;
+}
+
+@media (min-width: 500px) {
+    .navbar-links {
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 1;
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-links {
+        justify-content: space-around;
+        max-width: 40%;
+    }
 }
 
 .nav-link {
+    font-size: 1.1rem;
     color:#D65076;
     text-decoration: none;
-    padding: 10px 20px;
+}
+
+@media (min-width: 500px) {
+    .nav-link {
+        color: #bcc9a8;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-link {
+        color: #D65076;
+    }
 }
 
 .nav-link:hover {
     color:#00b489;
 }
 
+@media (min-width: 500px) {
+    .nav-link:hover {
+        color: #828C72;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-link:hover {
+        color: #97c6a4;
+    }
+}
+
+/* About Section */
+.about-desc {
+    background-color:#D65076;
+    max-width: 80%;
+    margin: 1.5rem auto 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+    .about-desc {
+        color: #828C72;
+        background-color: #76426f;
+        font-weight: 400;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-desc {
+        color: #458f82;
+        background-color: #97c6a4;
+        max-width: 40%;
+    }
+}
+
+/* Experience Section */
 .experience-list {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
-    padding: 0;
+    margin: 1.5rem auto 0;
+    max-width: 80%;
+    gap: 0.5rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+    .experience-list {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .experience-list {
+        max-width: 40%;
+    }
 }
 
 .experience-item {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    width: 100%;
+    flex-grow: 1;
+    padding: 1em;
     color:#EFC050;
-    margin: 5px auto;
-    padding: 15px;
-    border: solid #D65076 1px;
     border-radius: 5px;
     background-color:#D65076;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 500px) {
+    .experience-item {
+        color: #f3e9e2;
+        background-color: #76426f;
+    }
+}
+
+@media (min-width: 1200px) {
+    .experience-item {
+        color: #458f82;
+        background-color: #97c6a4;
+    }
+}
+
 .experience-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
 }
 
 .job-title {
     color:#45B8AC;
-    text-align: left;
     font-weight: bold;
+    text-align: left;
+    flex: 1;
 }
 
 .job-dates {
+    max-width: 100%;
+    text-align: right;
+    flex-shrink: 1;
     color:#45B8AC;
     font-style: italic;
-    text-align: right;
-    flex-shrink: 0;
+}
+
+@media (min-width: 500px) {
+    .job-title, .job-dates {
+        color: #828C72;
+    }
+}
+
+@media (min-width: 1200px) {
+    .job-title, .job-dates {
+        color: #458f82;
+    }
 }
 
 .job-description {
-    margin-top: 10px;
+    margin-top: 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Photo */
 .photo {
     width: 100%;
-    max-width: 200px;
+    display: flex;
+    max-width: 12.4rem;
     height: auto;
-    display: block;
     margin: 0 auto;
-    padding: 50px;
+    padding: 2rem;
 }
 
+/* Connect List */
 .connect-list {
+    max-width: 100%;
     list-style-type: none;
     padding: 0;
-    margin: 20;
+    margin: 1.5em auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
+/* Font Awesome Icons */
 .fa {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    padding: 20px;
-    width: auto;
+    font-size: 2rem;
+    padding: 1.2em;
+    max-width: 100%;
     margin: 0;
     text-align: center;
     text-decoration: none;
