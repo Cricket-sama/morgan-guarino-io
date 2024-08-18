@@ -234,8 +234,6 @@ section {
 }
 
 .experience-item {
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
     padding: 1em;
     color:#EFC050;
@@ -261,6 +259,7 @@ section {
 .experience-header {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .job-title {
@@ -294,6 +293,55 @@ section {
     margin-top: 1em;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* Skills Section */
+#skills {
+    display: flex;
+    margin: 1.5rem auto 0;
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+    #skills {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #skills {
+        max-width: 40%;
+    }
+}
+
+#skills ul {
+    list-style-type: none;
+    background-color: #D65076;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 500px) {
+    #skills ul {
+        font-weight: bolder;
+        color: #bcc9a8;
+        background-color: #76426f;
+    }
+}
+
+@media (min-width: 1200px) {
+    #skills ul {
+        color: #458f82;
+        background-color: #97c6a4;
+    }
+}
+
+#skills li {
+    margin: 0.5rem;
 }
 
 /* Photo */
@@ -352,4 +400,16 @@ section {
 .fa-envelope {
     background: #ea4c89;
     color: white;
+}
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+@media (min-width: 1200px) {
+    footer {
+        color: #f08e9a;
+    }
 }
