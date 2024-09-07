@@ -69,3 +69,34 @@ messageForm.addEventListener('submit', function(event) {
     checkListContents();
 });
 
+fetch('https://api.github.com/users/Cricket-sama/repos')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Oops! Request Failed');
+        }
+        return response.json();
+    })
+    .then(repositories => {
+        console.log(repositories);
+        
+        const projectSection = document.querySelector('#projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for (let i = 0; i < repositories.length; i++) {
+            let project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error(error);
+
+        const projectSection = document.querySelector('#projects');
+        const errorMessage = document.createElement('div');
+
+        errorMessage.innerText = 'Uh-oh! There was an issue finding the repositories :(';
+        errorMessage.style.color = 'red';
+        const projectList = projectSection.querySelector('ul');
+        projectList.appendChild(errorMessage);
+    });
+
