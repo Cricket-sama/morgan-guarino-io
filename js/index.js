@@ -1,3 +1,4 @@
+// Add footer
 const footerElement = document.createElement('footer');
 document.body.appendChild(footerElement);
 
@@ -11,6 +12,7 @@ copyright.innerHTML = `<b><i>Morgan Guarino</i></b> &copy ${thisYear}`
 
 footer.appendChild(copyright);
 
+//Add skills to skills section
 const skills = ['JavaScript', 'HTML', 'CSS', 'GitHub'];
 
 const skillsSection = document.querySelector('#skills');
@@ -22,6 +24,7 @@ for (let i = 0; i < skills.length; i++) {
     skillsList.appendChild(skill);
 }
 
+// Display messages section only if there are messages
 function checkListContents() {
     const messageSection = document.querySelector('#messages');
     const messageList = messageSection.querySelector('ul');
@@ -35,6 +38,7 @@ function checkListContents() {
 
 checkListContents();
 
+// Create form for leaving messages
 const messageForm = document.querySelector('form[name="leave_message"]');
 
 messageForm.addEventListener('submit', function(event) {
@@ -69,6 +73,7 @@ messageForm.addEventListener('submit', function(event) {
     checkListContents();
 });
 
+// Display projects from Github
 fetch('https://api.github.com/users/Cricket-sama/repos')
     .then(response => {
         if (!response.ok) {
