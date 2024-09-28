@@ -74,7 +74,7 @@ messageForm.addEventListener('submit', function(event) {
 });
 
 // Display projects from Github
-fetch('https://api.github.com/users/Cricket-sama/repos')
+fetch('https://api.github.com/users/cricket-sama/repos')
     .then(response => {
         if (!response.ok) {
             throw new Error('Oops! Request Failed');
@@ -89,7 +89,13 @@ fetch('https://api.github.com/users/Cricket-sama/repos')
 
         for (let i = 0; i < repositories.length; i++) {
             let project = document.createElement('li');
-            project.innerText = repositories[i].name;
+            let link = document.createElement('a');
+            link.href = repositories[i].html_url;
+            link.textContent = repositories[i].name;
+            link.target = "_blank";
+
+            project.appendChild(link);
+            
             projectList.appendChild(project);
         }
     })
